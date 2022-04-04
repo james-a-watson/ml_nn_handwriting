@@ -29,10 +29,10 @@ of weights between the three layers of the network. for the next iteration the c
 predictions more accurate.
 
 # Difficulties
-The construction of the network was not the hardest part of this project. Beyond some fiddly numpy function and 
+The construction of the network was not the hardest part of this project. Beyond some fiddly numpy functions and 
 the odd hour spent solving obscure array bugs, the concept and coding was within my competancies. The thing I 
 learned the most in this project was how to  optimize code. In no project I have built before were so many loops
-required. Having to call the same function so many times required any slight inefficiency to be magified.
+required. Having to call the same function so many times caused any slight inefficiency to be magnified.
 
 When I first wrote the code it took just over 20 mins. I used vectorization to reduce the number of loops and 
 cProfiling to identify which functions and methods were taking the most time. This allowed me to get the algorthm 
