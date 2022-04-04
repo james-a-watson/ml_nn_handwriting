@@ -22,7 +22,7 @@ the score for that iteration. The higher the cost, the worse the network perform
 Once the cost has been calculated for an iteration the algorithm will take a small step down the "cost slope".
 The gradient of the slope is calculated using linear algebra on the matrix of costs for the current iteration. 
 A downward step is taken to reduce the cost in the next iteration. There is some level of randomness to how much
-the cost is reduces but it will alway go down. 
+the cost is reduces but it will always go down. 
 
 The system then uses backpropagation which takes the step down the cost slope and uses it to affect the 2 matricies 
 of weights between the three layers of the network. for the next iteration the cost will be lower and therefore the 
