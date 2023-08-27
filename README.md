@@ -1,6 +1,6 @@
 Hello, 
 
-Thanks for checking out my machine learning GitHub project!
+Thanks for checking out my MNIST GitHub project!
 
 After studying ML for a little over a year and completing a 12 week course from Stanford University
 I wanted to put the things I'd learnt into a neural network built in python. The development process 
@@ -9,7 +9,7 @@ was really fun and I enjoyed working through the issues that this sort of comple
 
 # How the Neural Network Predicts
 The neural network learns from 5000 labelled examples of handwritten numbers, each in a 20x20 pixel grid. 
-This results in a 400 dimension input vector. The Network then takes the input data and initialises 2 matricies
+This results in a 400 dimension input vector. The Network then takes the input vector and initialises 2 matricies
 of weights that value certain pixels in the 20x20 grid more or less and based on which pixels are highlighted. 
 
 Using a hidden layer of 25 nodes, and the two matricies, the network asigns a likelihood to the input grid 
@@ -31,8 +31,12 @@ predictions more accurate.
 # Difficulties
 The construction of the network was not the hardest part of this project. Beyond some fiddly numpy functions and 
 the odd hour spent solving obscure array bugs, the concept and coding was within my competancies. The thing I 
-learned the most in this project was how to  optimize code. In no project I have built before were so many loops
-required. Having to call the same function so many times caused any slight inefficiency to be magnified.
+learned the most in this project was how to optimize code. In no project I have built before were so many loops
+required. I was calling the same function millions of times as the model iterated over each individual value.
+
+Vectorization was the key to solving this. Rather than passing in all the output seperatly in a loop I made the adjustment
+to pass in  vector into one function. That resulted in all the small calculations of the function happening at once to the
+same vector and reducing the time spent computing the calculations significantly.s
 
 When I first wrote the code it took just over 20 mins. I used vectorization to reduce the number of loops and 
 cProfiling to identify which functions and methods were taking the most time. This allowed me to get the algorthm 
